@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Suraj Yadav | MERN Stack Developer &amp; AI/GenAI Explorer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO / recruiter link previews -->
+    <meta name="author" content="Suraj Yadav">
+    <meta name="description" content="Suraj Yadav — MERN Stack Developer, DSA enthusiast and AI/GenAI explorer. B.Tech (ECE-IoT) at MMMUT Gorakhpur. Building full-stack products like CodeJudge and the AgenticForge multi-agent AI platform.">
+    <meta name="keywords" content="Suraj Yadav, MERN Stack Developer, React, Node.js, Express, MongoDB, JavaScript, DSA, AI, GenAI, LangGraph, Software Engineer Intern, Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Suraj Yadav | MERN Stack Developer &amp; AI/GenAI Explorer">
+    <meta property="og:description" content="Full-stack (MERN) developer building real products and exploring AI-powered systems.">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /*======================================
+        // ORIGINAL TEMPLATE TWEAKS (kept)
+        ======================================*/
+        .about-mf .box-shadow-full { padding-top: 4rem; padding-bottom: 4rem; }
+        .about-mf .about-img { margin-bottom: 2rem; }
+        .about-mf .about-img img { margin-left: 10px; }
+        .skill-mf .progress { margin: .5rem 0 1.2rem 0; border-radius: 0; height: .7rem; }
+        .skill-mf .progress .progress-bar { height: .7rem; background-color: #ffbd39; }
+
+        /* Typing animation */
+        #typing-animation {
+            position: relative; font-size: 30px; font-weight: bold;
+            color: #ffbd39; overflow: hidden; white-space: nowrap;
+        }
+
+        /* project image zoom effect */
+        .zoom-effect { overflow: hidden; transition: transform 0.3s ease-out; }
+        .zoom-effect:hover { transform: scale(1.1); }
+
+        /*======================================
+        // DARK THEME (layered over style.css)
+        // Accent kept as the template amber (#ffbd39)
+        ======================================*/
+        :root { --bg:#000000; --bg2:#111111; --surface:#1e1e1e; --line:#333333;
+                --txt:#cbd5e1; --txt-bright:#f8fafc; --muted:#94a3b8; --accent:#ffbd39; --accent-2:#ffbd39; }
+
+        html, body { background: var(--bg) !important; color: var(--txt) !important; }
+        h1, h2, h3, h4, h5, h6 { color: var(--txt-bright) !important; }
+        p, li, span { color: var(--txt); }
+        a { color: var(--txt); transition: color .2s ease; }
+        a:hover, a:focus { color: var(--accent) !important; text-decoration: none; }
+        section { background: var(--bg); }
+        #about-section, #project-section { background: var(--bg2); }
+
+        /* Navbar */
+        .ftco_navbar { background: rgba(0,0,0,.30); }
+        .ftco-navbar-light.scrolled { background: var(--bg) !important; box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+        .ftco-navbar-light .navbar-brand { color: #fff !important; font-weight: 700; letter-spacing: .5px; }
+        .ftco-navbar-light .navbar-nav > .nav-item > .nav-link { color: #d7dde8 !important; }
+        .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+        .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link { color: var(--accent) !important; }
+        .ftco-navbar-light.scrolled .navbar-nav > .nav-item > .nav-link { color: #d7dde8 !important; }
+
+        /* Section heading watermark */
+        .heading-section .big, .heading-section .big.big-2 { color: rgba(255,255,255,.045) !important; }
+        .heading-section h2 { color: var(--txt-bright) !important; }
+        .heading-section p { color: var(--muted) !important; }
+        .big-4 { color: var(--txt-bright) !important; }
+        .underline { background: var(--accent); height: 3px; width: 70px; }
+
+        /* Hero */
+        #home-section .one-third.img { background-size: cover !important; background-position: center top !important; }
+        #home-section .one-third .overlay { background: rgba(0,0,0,.22) !important; }
+        #home-section .subheading { color: var(--accent) !important; font-weight: 600; }
+        #home-section h1, #home-section h1 span { color: #fff !important; }
+        #home-section h2 { color: var(--muted) !important; font-size: 22px; }
+
+        /* About */
+        .img-about .overlay { background: transparent !important; }
+        .about-info p span.title-s, .title-s { color: var(--accent) !important; font-weight: 600; }
+        .about-info li span:first-child { color: var(--accent) !important; font-weight: 600; }
+        .about-info li span:last-child { color: var(--txt) !important; }
+        .skill-mf .progress { background: var(--line); }
+        .skill-mf span { color: var(--txt); }
+        .counter-wrap .number, .block-18 .number { color: #fff !important; }
+        .counter-wrap .text span { color: var(--muted); }
+
+        /* Resume / Education / Achievement cards */
+        .resume-wrap { background: var(--surface); border: 1px solid var(--line);
+            border-left: 4px solid var(--accent); border-radius: 10px; padding: 1.6rem 1.8rem; }
+        .resume-wrap .date { color: var(--accent) !important; font-weight: 600; }
+        .resume-wrap h2 { color: #fff !important; }
+        .resume-wrap .position { color: var(--muted) !important; font-style: italic; }
+        .resume-wrap p, .resume-wrap li { color: var(--txt) !important; }
+
+        /* Project cards */
+        .blog-entry { background: var(--surface); border: 1px solid var(--line);
+            border-radius: 12px; overflow: hidden; width: 100%; transition: transform .25s ease, box-shadow .25s ease; }
+        .blog-entry:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,.45); border-color: var(--accent); }
+        .blog-entry .block-20 { border-radius: 0; height: 220px; }
+        .blog-entry .text { float: none !important; padding: 1.2rem 1.4rem 1.5rem; }
+        .blog-entry .text .heading a { color: #fff; font-weight: 600; }
+        .blog-entry .text .heading a:hover { color: var(--accent) !important; }
+        .blog-entry .text > p { color: var(--muted); font-size: 14px; min-height: 0; }
+        .project-features { list-style: none; padding-left: 0; margin: .6rem 0 .8rem; }
+        .project-features li { position: relative; padding-left: 18px; font-size: 13px; color: var(--muted); margin-bottom: 5px; }
+        .project-features li:before { content: "\25B9"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+        .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin: .4rem 0 1rem; }
+        .tech-stack span { font-size: 11px; letter-spacing: .4px; background: var(--bg);
+            border: 1px solid var(--line); color: var(--accent); padding: 3px 10px; border-radius: 999px; }
+        .project-links { margin-bottom: 0; }
+        .project-links .btn { font-size: 13px; margin: 0 6px 6px 0; }
+        .btn-demo-disabled { opacity: .55; cursor: not-allowed; }
+
+        /* Buttons */
+        .btn-primary { background: var(--accent) !important; border-color: var(--accent) !important;
+            color: #000000 !important; font-weight: 600; }
+        .btn-primary:hover { background: var(--accent-2) !important; border-color: var(--accent-2) !important; color: #000000 !important; }
+        .btn-white.btn-outline-white { color: var(--accent) !important; border-color: var(--accent) !important; background: transparent !important; }
+        .btn-white.btn-outline-white:hover { background: var(--accent) !important; color: #000000 !important; }
+
+        /* Counter band + hire-me */
+        .ftco-counter, #section-counter { background: var(--bg2) !important; }
+        .ftco-counter .overlay, .ftco-hireme .overlay { background: rgba(0,0,0,.78) !important; }
+        .ftco-hireme h2, .ftco-hireme h4 { color: #fff !important; }
+        .ftco-hireme span { color: var(--accent) !important; }
+
+        /* Contact */
+        .contact-section .box { background: transparent !important; border: none !important; box-shadow: none !important; padding: 1.5rem !important; }
+        .contact-section .box .icon { background: #111111 !important; border: none !important; width: 80px; height: 80px; border-radius: 50% !important; margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; }
+        .contact-section .box .icon span { color: var(--accent) !important; font-size: 24px; }
+        .contact-section .box h3 { color: #fff !important; font-size: 14px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px !important; }
+        .contact-section .box p, .contact-section .box a { color: var(--muted) !important; font-size: 16px; word-wrap: break-word; overflow-wrap: break-word; }
+        .ftco-footer-social li a { background: var(--surface); border: 1px solid var(--line); color: var(--txt) !important; }
+        .ftco-footer-social li a:hover { background: var(--accent); color: #000000 !important; border-color: var(--accent); }
+        .ftco-footer-social .normal-txt { background: none !important; border: none !important; color: var(--muted) !important; }
+        .ftco-footer-social li a svg { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 22px; height: 22px; fill: currentColor; }
+
+        /* Footer + loader */
+        .ftco-footer { background: var(--bg) !important; border-top: 1px solid var(--line); }
+        .ftco-footer p, .ftco-footer a { color: var(--muted) !important; }
+        .ftco-footer a:hover { color: var(--accent) !important; }
+        #ftco-loader.fullscreen { background: var(--bg); }
+
+        /* Contact Form custom styling */
+        .bg-dark-form {
+            background: var(--surface) !important;
+            border: 1px solid var(--line) !important;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .contact-form .form-control {
+            color: var(--txt-bright) !important;
+            background: rgba(0,0,0,0.2) !important;
+            border: 1px solid var(--line) !important;
+            transition: all 0.3s ease;
+        }
+        .contact-form .form-control:focus {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 10px rgba(255, 189, 57, 0.15) !important;
+            background: rgba(0,0,0,0.4) !important;
+        }
+        .contact-form .form-control::placeholder {
+            color: var(--muted) !important;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Suraj Yadav</a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+                    <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                    <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+                    <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+                    <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Suraj Yadav. All rights reserved.
+                        <br>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ffbd39"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+            const responseDiv = document.getElementById('formResponse');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = "Sending...";
+            btnSpinner.classList.remove('d-none');
+            responseDiv.textContent = "";
+            responseDiv.style.color = "";
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            fetch("https://formsubmit.co/ajax/surajyadav2823510@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                const data = await response.json();
+                if (response.ok) {
+                    responseDiv.style.color = "#28a745"; // Green for success
+                    responseDiv.textContent = "Message sent successfully! Thank you.";
+                    form.reset();
+                } else {
+                    responseDiv.style.color = "#dc3545"; // Red for error
+                    responseDiv.textContent = data.message || "Failed to send message. Please try again.";
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                responseDiv.style.color = "#dc3545";
+                responseDiv.textContent = "An error occurred. Please try again later.";
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.textContent = "Send Message";
+                btnSpinner.classList.add('d-none');
+            });
+        });
+    </script>
+</body>
+</html>
